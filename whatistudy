@@ -1,0 +1,140 @@
+01-07-2020 
+
+    • AWS Free Account Created 
+    • Install the AWS CLI version 2 on Linux
+    • Access keys (access key ID and secret access key)
+    • User Creation:
+           *  IAM- Identity Access Management
+      
+          *  After create a user we will get two ids: aws_access_key_id and  aws_secret_access_key and download the keys.
+    • I’ve created S3 Bucket manually and also created using command line 
+    • And also Upload a file to bucket manually and also using command line
+
+
+
+used command:
+
+1. aws configure
+2. aws s3 mb s3://bucketname/     
+3. aws s3 cp usbboot.txt s3://imnishanthtr2/
+4. aws s3 cp s3://imnishanthtr2/usbboot.txt home/
+
+
+    • Github account created
+
+
+02-07-2020
+
+    • Terraform installed
+
+Gitub- Version Control System
+
+Collaboration
+Storing Version
+
+git remote add origin “url” => connect/link to the remote directory
+git pull origin master => fetch file from the remote directory
+git init
+git status
+git add -A => add all the file
+git add filename=> add single file
+git commit -m “msg” => commit single file
+git commit -a -m “msg” => commit multiple files.
+Git log
+
+
+
+
+Branching concept:
+
+git branch branchname=> create new branch
+git checkout branchname=> which branch we want to go
+
+merging concept:
+
+allways in master branch before merging 
+
+git merge branchname=> merging file, every time we have to merge
+
+Rebasing concept:
+
+
+SSH KEY GENERATION
+
+ssh-keygen
+
+cat  <location> it will view the key
+
+after copy the and paste it in ssh key which in the github setting
+
+ssh -T git@github.com
+
+git push origin master
+git push origin <branchname>
+
+revert back to previous version
+
+git log
+
+copy 8 digit decimal code
+
+git checkout <8digit code> <filename>
+
+to view the file
+
+cat <filename>
+
+03-07-2020
+
+Create a bucket in aws, using the terraform code.
+I have learned about EC2 
+
+04-07-2020
+
+terraform init
+terraform validate .   
+teraform apply                                ${type.name.attributename}  
+terraform destroy
+instance created using terraform code
+
+05-07-2020
+
+Study Docker
+Docker install
+sudo apt  install docker.io
+sudo systemctl enable --now docker
+
+
+06-07-2020
+
+sudo docker run docker/whalesay cowsay Hello-World
+
+< Hello-World >
+ ------------- 
+    \
+     \
+      \     
+                    ##        .            
+              ## ## ##       ==            
+           ## ## ## ##      ===            
+       /""""""""""""""""___/ ===        
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
+       \______ o          __/            
+        \    \        __/             
+          \____\______/   
+
+Docker commands:
+
+docker run nginx
+docker ps- list containers
+docker ps -a
+docker ps <containername>
+docker rm <containername>- remove the container permanantely
+docker images- list of imager persend in the host
+docker rmi nginx- remove images
+docker run nginx
+docker pull nginx
+docker exec <containername> cat /etc/hosts
+docker run -d <containername/containerlocation> -run the container in the background mode
+docker attach <containerid> 
+
