@@ -127,7 +127,7 @@ Docker commands:
 
 docker run nginx
 docker ps- list containers
-docker ps -a
+docker ps -a -> list the containers and previous deleted containers
 docker ps <containername>
 docker rm <containername>- remove the container permanantely
 docker images- list of imager persend in the host
@@ -135,6 +135,29 @@ docker rmi nginx- remove images
 docker run nginx
 docker pull nginx
 docker exec <containername> cat /etc/hosts
+
+
 docker run -d <containername/containerlocation> -run the container in the background mode
 docker attach <containerid> 
+
+
+07-07-2020
+
+sudo cat /etc/group
+sudo usermod -aG docker imnishanthtr
+su -l imnishanthtr  / sudo su -imnishanthtr
+id -nG
+
+df -TPh ---> check how much the disk has been utilized
+
+docker images
+docker image ls
+docker run -it <containername> /bin/bash
+cat /etc/lsb-release ---> to view the version of ubuntu
+docker run -d <containername> ping <local_ip> 100 ---> run the container in the detached mode(background)
+docker logs <container_id>
+docker top <container_id>
+docket logs -f <container_id>
+
+
 
